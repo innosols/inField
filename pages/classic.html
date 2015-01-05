@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="no-skrollr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>inField&trade;</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="../assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+<!--
+    We position the images fixed and therefore need to place them outside of #skrollr-body.
+    We will then use data-anchor-target to display the correct image matching the current section (.gap element).
+-->
+
+<div class="parallax-image-wrapper parallax-image-wrapper-100"
+     data-anchor-target="#dragons + .gap"
+     data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+     data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+    <div class="parallax-image parallax-image-100"
+         style="background-image:url(../assets/img/carousel-img1.jpg)"
+         data-anchor-target="#dragons + .gap"
+         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+            ></div>
+    <!--the +/-80% translation can be adjusted to control the speed difference of the image-->
+</div>
+
+<div class="parallax-image-wrapper parallax-image-wrapper-100"
+     data-anchor-target="#product + .gap"
+     data-bottom-top="transform:translate3d(0px, 200%, 0px)"
+     data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+    <div class="parallax-image parallax-image-100"
+         style="background-image:url(../assets/img/carousel-img2.jpg)"
+         data-anchor-target="#product + .gap"
+         data-bottom-top="transform: translate3d(0px, -80%, 0px);"
+         data-top-bottom="transform: translate3d(0px, 80%, 0px);"
+            ></div>
+</div>
+
+<div class="parallax-image-wrapper parallax-image-wrapper-50"
+     data-anchor-target="#customers + .gap"
+     data-bottom-top="transform:translate3d(0px, 300%, 0px)"
+     data-top-bottom="transform:translate3d(0px, 0%, 0px)">
+
+    <div class="parallax-image parallax-image-50"
+         style="background-image:url(../assets/img/automobile.jpg)"
+         data-anchor-target="#customers + .gap"
+         data-bottom-top="transform: translate3d(0px, -60%, 0px);"
+         data-top-bottom="transform: translate3d(0px, 60%, 0px);"
+            ></div>
+</div>
+
+<div class="skrollr-body">
+    <div class="" id="dragons">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner" style="background: rgba(10, 10, 10, 0.7) none;">
+                <div class="container">
+                    <a class="brand" href="#"><img src="../assets/img/infield-logo.png" width="100px"></a>
+                    <ul class="nav pull-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#product">PRODUCT</a></li>
+                        <li><a href="#customers">CUSTOMERS</a></li>
+                        <li><a href="#journal">JOURNAL</a></li>
+                        <li><a href="#about-us">ABOUT US</a></li>
+                        <li><a href="#contact-us">CONTACT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gap height-100" style="background-image:url(../assets/img/carousel-img1.jpg);"></div>
+    <div class="content" id="product">
+        <section>
+            <div class="section-heading">PRODUCT</div>
+            <div class="section-subheading">What we offer</div>
+            <div class="section-content">
+                <p>inField is an awesome swiss army knife.</p>
+
+                <p>Landjaeger spare ribs chicken ball tip, filet mignon frankfurter ribeye tenderloin corned beef. Strip
+                    steak
+                    boudin pork loin, chicken turkey ball tip beef ribs ground round shank ham hock. Kevin capicola
+                    beef,
+                    chuck
+                    pork chop shoulder brisket doner meatloaf shank ham hock tenderloin. Chuck ham hock short ribs
+                    ground
+                    round
+                    sausage prosciutto shoulder bacon andouille tri-tip beef biltong filet mignon chicken. Pork belly
+                    andouille
+                    shank, bacon sausage meatloaf bresaola pork chop short ribs t-bone. Ham hock salami porchetta bacon
+                    beef
+                    turkey, strip steak kielbasa pancetta brisket meatball t-bone.</p>
+
+                <p>Chicken pancetta capicola chuck, turkey meatball jerky frankfurter kielbasa ball tip bacon ground
+                    round.
+                    Beef
+                    ribs brisket meatloaf short ribs landjaeger shankle spare ribs sausage, pancetta swine sirloin
+                    flank.
+                    Tail
+                    shank chuck pancetta, ham meatloaf short ribs sausage rump turkey kevin pork chop landjaeger. Doner
+                    boudin
+                    short ribs t-bone, jerky shankle bresaola drumstick. Strip steak shank spare ribs boudin doner short
+                    ribs.
+                    Boudin prosciutto jowl tenderloin tongue beef ribs, short ribs salami short loin strip steak ham
+                    jerky.
+                    Shank pancetta beef ribs, corned beef ham hock pork belly drumstick tail bresaola chuck.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="gap height-100" style="background-image:url(../assets/img/automobile.jpg);"></div>
+    <div class="content height-100" id="customers">
+        <section>
+            <div class="section-heading">CUSTOMERS</div>
+            <div class="section-subheading">People who trust us</div>
+            <div class="section-content">
+                <p>We have been working with the best of the brands in India. Currently our solutions is being used by
+                    more than 8000 field users in various and different industries.</p>
+                <p>Some of our clients are.</p>
+                <div class="industry">Telecom</div>
+                <p class="description">To monitor people working out for providing tele-connections and building relationships. i.e. AirTel</p>
+                <div class="industry">Automobile</div>
+                <p class="description">To monitor what do the showrooms keep in display and to have an eye on the bounce rate of individual showrooms/workshops.</p>
+                <div class="industry">Consumer Durables</div>
+                <p class="description">i.e. Whirlpool</p>
+                <div class="industry">IT Sector</div>
+                <p class="description"></p>
+                <div class="industry">Mobiles</div>
+                <p class="description"></p>
+                <div class="industry">Audit</div>
+                <p class="description">i.e. V5</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="gap height-50" style="background-image:url(../assets/img/carousel-img3.jpg);"></div>
+    <div class="content height-50" id="contact-us">
+        <section>
+            <div class="section-heading">CONTACT US</div>
+            <div class="section-subheading">We love to hear from you</div>
+            <div class="section-content">
+                <p>We are available <br/>on email <a href="mailto:sales@innosols.co.in?subject=Getting%20in%20touch"
+                                                       target="_blank">sales@innosols.co.in</a>.<br/>
+                    and on phone <a href="tel:+91129407774" target="_blank">+91 129 4077774</a>.
+                </p>
+                <p>If you want to visit us, here is our address.</p>
+                <address data-map="https://www.google.co.in/maps/place/Ansal+Crown+Heights+Faridabad/@28.3847639,77.3037228,16z">
+                    35-36, Shubham Tower<br/>
+                    NIT Faridabad<br/>
+                    Haryana 121001
+                </address>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script type="text/javascript" src="../libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="../libs/skrollr.min.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript">
+    skrollr.init({
+        smoothScrolling: false,
+        mobileDeceleration: 0.004
+    });
+</script>
+</body>
+
+</html>
