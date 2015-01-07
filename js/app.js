@@ -28,9 +28,13 @@ var supportsImports = function() {
 $(document).ready(function () {
     var body = $('body');
 
-    var openLinkInNewTab = function(url) {
+    var openLink = function(url, newTab) {
         var time = new Date().getUTCMilliseconds();
-        body.append('<a class="hide ' + time + '" target="_blank" href="' + url + '"></a>');
+        if (newTab) {
+            body.append('<a class="hide ' + time + '" target="_blank" href="' + url + '"></a>');
+        } else {
+            body.append('<a class="hide ' + time + '" target="_self" href="' + url + '"></a>');
+        }
         var aLink = body.find('.' + time);
         if (devMode) {
             console.log('Requested to open url: ' + url);
@@ -61,7 +65,14 @@ $(document).ready(function () {
     body.on('click', '.out-link', function() {
         var url = encodeURI($(this).attr('data-href'));
         if (url !== undefined && url.length) {
-            openLinkInNewTab(url);
+            openLink(url, true);
+        }
+    });
+
+    body.on('click', '.in-link', function() {
+        var url = encodeURI($(this).attr('data-href'));
+        if (url !== undefined && url.length) {
+            openLink(url, false);
         }
     });
 
