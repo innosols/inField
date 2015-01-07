@@ -15,8 +15,9 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/marquee.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body data-spy="scroll" data-target=".navbar">
 <div id="homePageCarousel" class="carousel slide homepage-carousel">
@@ -367,22 +368,7 @@
                 Currently our solutions is being used by more than 10000 field users for multiple brands.</p>
                 <p>Some of our prestigious clients are listed below.</p>
                 <div class="clients row-fluid">
-                    <marquee behavior="alternate" direction="left" scrollamount="5">
-                        <img class="grayscale" src="assets/img/clients/AIRTEL-LOGO.png">
-                        <img class="grayscale" src="assets/img/clients/whirlpool-logo.png">
-                        <img class="grayscale" src="assets/img/clients/canon-logo.png">
-                        <img class="grayscale" src="assets/img/clients/honeywell_logo.png">
-                        <img class="grayscale" src="assets/img/clients/Lenovo-Logo.png">
-                        <img class="grayscale" src="assets/img/clients/microsoft-logo.png">
-                        <img class="grayscale" src="assets/img/clients/philips_logo.png">
-                        <img class="grayscale" src="assets/img/clients/Logitech_logo.png">
-                        <img class="grayscale" src="assets/img/clients/apple-logo.png">
-                        <img class="grayscale" src="assets/img/clients/Havells_Logo.png">
-                        <img class="grayscale" src="assets/img/clients/ingram-micro-logo.png">
-                        <img class="grayscale" src="assets/img/clients/Redington.png">
-                        <img class="grayscale" src="assets/img/clients/toshiba-logo.png">
-                    </marquee>
-                    <!--<div class="marquee">-->
+                    <!--<marquee behavior="alternate" direction="left" scrollamount="5">-->
                         <!--<img class="grayscale" src="assets/img/clients/AIRTEL-LOGO.png">-->
                         <!--<img class="grayscale" src="assets/img/clients/whirlpool-logo.png">-->
                         <!--<img class="grayscale" src="assets/img/clients/canon-logo.png">-->
@@ -396,7 +382,24 @@
                         <!--<img class="grayscale" src="assets/img/clients/ingram-micro-logo.png">-->
                         <!--<img class="grayscale" src="assets/img/clients/Redington.png">-->
                         <!--<img class="grayscale" src="assets/img/clients/toshiba-logo.png">-->
-                    <!--</div>-->
+                    <!--</marquee>-->
+                    <div class="marquee">
+                        <div class="scroller">
+                            <img class="grayscale" src="assets/img/clients/AIRTEL-LOGO.png">
+                            <img class="grayscale" src="assets/img/clients/whirlpool-logo.png">
+                            <img class="grayscale" src="assets/img/clients/canon-logo.png">
+                            <img class="grayscale" src="assets/img/clients/honeywell_logo.png">
+                            <img class="grayscale" src="assets/img/clients/Lenovo-Logo.png">
+                            <img class="grayscale" src="assets/img/clients/microsoft-logo.png">
+                            <img class="grayscale" src="assets/img/clients/philips_logo.png">
+                            <img class="grayscale" src="assets/img/clients/Logitech_logo.png">
+                            <img class="grayscale" src="assets/img/clients/apple-logo.png">
+                            <img class="grayscale" src="assets/img/clients/Havells_Logo.png">
+                            <img class="grayscale" src="assets/img/clients/ingram-micro-logo.png">
+                            <img class="grayscale" src="assets/img/clients/Redington.png">
+                            <img class="grayscale" src="assets/img/clients/toshiba-logo.png">
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -664,16 +667,6 @@
             $(window).scrollTop($(window).scrollTop()+76);
         });
 
-        var initializeClientAnimation = function() {
-            var clientsImageArray = $('.clients .marquee img');
-            for(var i in clientsImageArray) {
-                $(clientsImageArray[i]).removeClass('slideOutLeft').addClass('animated slideInRight');
-                setTimeout(function() {
-                    $(clientsImageArray[i]).removeClass('slideInRight').addClass('slideOutLeft');
-                }, 1000);
-            }
-        };
-
         $(document).on('scroll', function(e) {
             initializeSectionAnimation();
             var windowHeight = screen.availHeight<$(window).height() ? screen.availHeight : $(window).height();
@@ -704,7 +697,6 @@
 
 //        scroller.refresh(body);
         $(window).resize(setSizeOfCarouselImages);
-        initializeClientAnimation();
     }); // End of Document.ready
 </script>
 </body>

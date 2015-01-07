@@ -24,12 +24,6 @@ img.grayscale:hover {
     -webkit-filter: grayscale(0%);
 }
 
-/*.marquee {*/
-    /*-webkit-marquee: auto medium infinite alternate normal;*/
-    /*-moz-marquee: auto medium infinite alternate normal;*/
-    /*overflow-x: -webkit-marquee;*/
-/*}*/
-
 .navbar-default {
     border: none;
 }
@@ -268,7 +262,7 @@ footer {
 .clients img {
     opacity: 0.8;
     box-shadow: 4px 0 5px #ccc;
-    margin: 2%;
+    margin: 0 1%;
 }
 
 .strong {

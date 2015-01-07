@@ -65,8 +65,4 @@ $(document).ready(function () {
         }
     });
 
-    $('.marquee').children().each(function() {
-        $(this).addClass('fade');
-    });
-
 });
