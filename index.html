@@ -661,19 +661,19 @@
                 navigationLinksContainer.addClass('in');
                 messageInNavBar.removeClass('in');
                 navWrapper.find('.smartly').removeClass('in').addClass('hide');
-                navWrapper.animate({height: '75px'}, 100);
+                navWrapper.css('height', '75px');
                 navWrapper.css('background-color', 'rgba(8,8,8,0.8)');
                 navWrapper.find('.container').css('height', '75px');
-                navWrapper.find('img').animate({width: '100px'}, 100);
+                navWrapper.find('img').css('width', '100px');
             } else {
                 navWrapper.attr('style', '');
                 messageInNavBar.addClass('in');
                 navigationLinksContainer.css('display', 'none');
                 navWrapper.find('.smartly').addClass('in').removeClass('hide');
-                navWrapper.animate({height: '150px'}, 100);
+                navWrapper.css('height', '150px');
                 navWrapper.css('background-color', 'rgba(8,8,8,0.2)');
                 navWrapper.find('.container').css('height', '150px');
-                navWrapper.find('img').animate({width: '150px'}, 100);
+                navWrapper.find('img').css('width', '150px');
             }
         });
 
