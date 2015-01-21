@@ -27,6 +27,7 @@ var supportsImports = function() {
 
 $(document).ready(function () {
     var body = $('body');
+    var flipImageIntervalId = 0;
 
     var openLink = function(url, newTab) {
         var time = new Date().getUTCMilliseconds();
@@ -44,13 +45,19 @@ $(document).ready(function () {
         $(aLink).remove();
     };
 
+    var flipToImage = function(descriptionElement) {
+        $(descriptionElement).closest('.flip-img-container').find('img').removeClass('flipOutY').addClass('flipInY');
+        $(descriptionElement).removeClass('flipInY').addClass('flipOutY');
+        clearInterval(flipImageIntervalId);
+    };
+
     // Only latest chrome (v31+) supports HTML5 imports, hence we are not using it right now.
     console.log(supportsImports() ? 'Yay! this browser supports HTML5 imports.' : "This browser doesn't support imports.");
 
     body.on('click', 'address', function (e) {
         var mapUrl = encodeURI($(this).attr('data-map'));
         if (mapUrl !== undefined && mapUrl.length) {
-            openLinkInNewTab(mapUrl);
+            openLink(mapUrl, true);
         }
     });
 
@@ -73,6 +80,25 @@ $(document).ready(function () {
         var url = encodeURI($(this).attr('data-href'));
         if (url !== undefined && url.length) {
             openLink(url, false);
+        }
+    });
+
+    body.on('mouseenter', '.flip-img-container img', function(e) {
+        $(this).removeClass('flipInY').addClass('animated flipOutY');
+        $(this).closest('.flip-img-container').find('.description').removeClass('flipOutY hide').addClass('animated flipInY');
+        flipImageIntervalId = setInterval(function() {
+            if(!$('.flip-img-container .description:hover').length) {
+                $('.flip-img-container .description').each(function() {
+                    flipToImage(this);
+                });
+            }
+        }, 3000);
+    });
+
+    body.on('mouseout', '.flip-img-container .description', function(e) {
+        var toElement = $(e.toElement);
+        if(!toElement.hasClass('description') && !toElement.closest('.description').length) {
+            flipToImage(this);
         }
     });
 

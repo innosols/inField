@@ -112,20 +112,35 @@ address[data-map] {
     margin-top: 2%;
 }
 
+.client-heading,
 .feature-heading {
     cursor: pointer;
     font-weight: bold;
     font-size: larger;
 }
 
-.link {
+.client-subheading,
+.feature-subheading {
+    color: #888;
+    font-size: small;
+}
+
+.link,
+.in-link,
+.out-link {
     cursor: pointer;
     color: #085880;
 }
 
-.link:hover, .link:active {
+.link:hover, .link:active,
+.in-link:hover, .in-link:active,
+.out-link:hover, .out-link:active {
     color: #005580;
     text-decoration: underline;
+}
+
+i {
+    text-decoration: none !important;
 }
 
 .skrollr-desktop body {
@@ -229,21 +244,32 @@ section {
     transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
+.client img,
 .team-member img {
     width: 75%;
     height: 2%;
+    max-height: 225px;
     margin-bottom: 5%;
     box-shadow: 0 2px 10px grey;
+}
+
+.client-heading img {
+    width: initial;
+    height: initial;
+    margin: 0;
+    box-shadow: none !important;
 }
 
 .no-shadow {
     box-shadow: none !important;
 }
 
+.client .name,
 .team-member .name {
     font-weight: bold;
 }
 
+.client .description,
 .team-member .description {
     position: absolute;
     padding: 3%;
@@ -262,7 +288,6 @@ footer {
 .clients img {
     opacity: 0.8;
     box-shadow: 4px 0 5px #ccc;
-    margin: 0 1%;
 }
 
 .strong {
@@ -296,6 +321,11 @@ footer {
     color: #1e3d80;
 }
 
+.icon-github, [class^="icon-github-"],
+[class*=" icon-github-"] {
+    color: #333 !important;
+}
+
 .icon-android {
     color: lawngreen;
 }
@@ -307,19 +337,4 @@ a.accordion-toggle {
 
 .accordion-group {
     border: none;
-}
-
-.clients-img-holder {
-    height: 75px;
-    overflow: hidden;
-}
-
-.clients-img-holder img {
-    /*width: 25px;*/
-    height: 45px;
-}
-
-.clients-img-holder img:hover {
-    /*width: 25px;*/
-    height: 75px;
 }
