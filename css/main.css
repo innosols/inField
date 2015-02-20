@@ -102,16 +102,18 @@ address[data-map] {
     cursor: pointer;
 }
 
-.industry {
-    cursor: pointer;
-    font-weight: bold;
-    font-size: larger;
-}
+/*.industry {*/
+    /*cursor: pointer;*/
+    /*font-weight: bold;*/
+    /*font-size: larger;*/
+/*}*/
 
+.industry,
 .feature {
     margin-top: 2%;
 }
 
+.industry-heading,
 .client-heading,
 .feature-heading {
     cursor: pointer;
@@ -119,10 +121,16 @@ address[data-map] {
     font-size: larger;
 }
 
+.industry-subheading,
 .client-subheading,
 .feature-subheading {
     color: #888;
     font-size: small;
+}
+
+.industry-subheading,
+.feature-subheading {
+    padding-left: 10%;
 }
 
 .link,
