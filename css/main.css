@@ -117,8 +117,8 @@ address[data-map] {
 .client-heading,
 .feature-heading {
     cursor: pointer;
-    font-weight: bold;
-    font-size: larger;
+    /*font-weight: bold;*/
+    font-size: xx-large;
 }
 
 .industry-subheading,
@@ -145,6 +145,13 @@ address[data-map] {
 .out-link:hover, .out-link:active {
     color: #005580;
     text-decoration: underline;
+}
+
+legend a:hover,
+legend a:active,
+legend a:visited,
+legend a:focus {
+    text-decoration: none;
 }
 
 i {
@@ -264,12 +271,22 @@ section {
 .client-heading img {
     width: initial;
     height: initial;
+    max-width: 32px;
+    max-height: 32px;
     margin: 0;
     box-shadow: none !important;
 }
 
 .no-shadow {
     box-shadow: none !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+legend .no-border {
+    font-weight: normal;
 }
 
 .client .name,
